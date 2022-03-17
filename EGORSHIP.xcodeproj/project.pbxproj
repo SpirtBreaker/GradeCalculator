@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		840A73B327B8DFE10095B838 /* User_EGORSHIP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840A73B127B8DFE10095B838 /* User_EGORSHIP.xcdatamodeld */; };
+		840A73B527B8E18F0095B838 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A73B427B8E18F0095B838 /* DataBase.swift */; };
+		840A73B727B8E4050095B838 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A73B627B8E4050095B838 /* UserView.swift */; };
+		8450263F27AFB4DE0023A190 /* EGORSHIPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450263E27AFB4DE0023A190 /* EGORSHIPApp.swift */; };
+		8450264127AFB4DE0023A190 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450264027AFB4DE0023A190 /* ContentView.swift */; };
+		8450264327AFB4DF0023A190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450264227AFB4DF0023A190 /* Assets.xcassets */; };
+		8450264627AFB4DF0023A190 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450264527AFB4DF0023A190 /* Preview Assets.xcassets */; };
+		8450265027AFB4E00023A190 /* EGORSHIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450264F27AFB4E00023A190 /* EGORSHIPTests.swift */; };
+		8450265A27AFB4E00023A190 /* EGORSHIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450265927AFB4E00023A190 /* EGORSHIPUITests.swift */; };
+		8450265C27AFB4E00023A190 /* EGORSHIPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450265B27AFB4E00023A190 /* EGORSHIPUITestsLaunchTests.swift */; };
+		84F4280427D498DD00B33500 /* SOCH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4280327D498DD00B33500 /* SOCH.swift */; };
+		84F4280627D4990C00B33500 /* SOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4280527D4990C00B33500 /* SOR.swift */; };
+		84F4280827D49F5400B33500 /* FinalGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4280727D49F5400B33500 /* FinalGrade.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8450264C27AFB4E00023A190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8450263327AFB4DE0023A190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8450263A27AFB4DE0023A190;
+			remoteInfo = EGORSHIP;
+		};
+		8450265627AFB4E00023A190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8450263327AFB4DE0023A190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8450263A27AFB4DE0023A190;
+			remoteInfo = EGORSHIP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		840A73B227B8DFE10095B838 /* User_EGORSHIP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User_EGORSHIP.xcdatamodel; sourceTree = "<group>"; };
+		840A73B427B8E18F0095B838 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		840A73B627B8E4050095B838 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		8450263B27AFB4DE0023A190 /* EGORSHIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGORSHIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8450263E27AFB4DE0023A190 /* EGORSHIPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGORSHIPApp.swift; sourceTree = "<group>"; };
+		8450264027AFB4DE0023A190 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8450264227AFB4DF0023A190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8450264527AFB4DF0023A190 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8450264B27AFB4E00023A190 /* EGORSHIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGORSHIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8450264F27AFB4E00023A190 /* EGORSHIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGORSHIPTests.swift; sourceTree = "<group>"; };
+		8450265527AFB4E00023A190 /* EGORSHIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGORSHIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8450265927AFB4E00023A190 /* EGORSHIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGORSHIPUITests.swift; sourceTree = "<group>"; };
+		8450265B27AFB4E00023A190 /* EGORSHIPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGORSHIPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84F4280327D498DD00B33500 /* SOCH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCH.swift; sourceTree = "<group>"; };
+		84F4280527D4990C00B33500 /* SOR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOR.swift; sourceTree = "<group>"; };
+		84F4280727D49F5400B33500 /* FinalGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalGrade.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8450263827AFB4DE0023A190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8450264827AFB4E00023A190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8450265227AFB4E00023A190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8450263227AFB4DE0023A190 = {
+			isa = PBXGroup;
+			children = (
+				84F4280527D4990C00B33500 /* SOR.swift */,
+				84F4280327D498DD00B33500 /* SOCH.swift */,
+				84F4280727D49F5400B33500 /* FinalGrade.swift */,
+				8450263D27AFB4DE0023A190 /* EGORSHIP */,
+				8450264E27AFB4E00023A190 /* EGORSHIPTests */,
+				8450265827AFB4E00023A190 /* EGORSHIPUITests */,
+				8450263C27AFB4DE0023A190 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8450263C27AFB4DE0023A190 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8450263B27AFB4DE0023A190 /* EGORSHIP.app */,
+				8450264B27AFB4E00023A190 /* EGORSHIPTests.xctest */,
+				8450265527AFB4E00023A190 /* EGORSHIPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8450263D27AFB4DE0023A190 /* EGORSHIP */ = {
+			isa = PBXGroup;
+			children = (
+				840A73B127B8DFE10095B838 /* User_EGORSHIP.xcdatamodeld */,
+				840A73B427B8E18F0095B838 /* DataBase.swift */,
+				8450263E27AFB4DE0023A190 /* EGORSHIPApp.swift */,
+				840A73B627B8E4050095B838 /* UserView.swift */,
+				8450264027AFB4DE0023A190 /* ContentView.swift */,
+				8450264227AFB4DF0023A190 /* Assets.xcassets */,
+				8450264427AFB4DF0023A190 /* Preview Content */,
+			);
+			path = EGORSHIP;
+			sourceTree = "<group>";
+		};
+		8450264427AFB4DF0023A190 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8450264527AFB4DF0023A190 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8450264E27AFB4E00023A190 /* EGORSHIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				8450264F27AFB4E00023A190 /* EGORSHIPTests.swift */,
+			);
+			path = EGORSHIPTests;
+			sourceTree = "<group>";
+		};
+		8450265827AFB4E00023A190 /* EGORSHIPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8450265927AFB4E00023A190 /* EGORSHIPUITests.swift */,
+				8450265B27AFB4E00023A190 /* EGORSHIPUITestsLaunchTests.swift */,
+			);
+			path = EGORSHIPUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8450263A27AFB4DE0023A190 /* EGORSHIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8450265F27AFB4E00023A190 /* Build configuration list for PBXNativeTarget "EGORSHIP" */;
+			buildPhases = (
+				8450263727AFB4DE0023A190 /* Sources */,
+				8450263827AFB4DE0023A190 /* Frameworks */,
+				8450263927AFB4DE0023A190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EGORSHIP;
+			productName = EGORSHIP;
+			productReference = 8450263B27AFB4DE0023A190 /* EGORSHIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8450264A27AFB4E00023A190 /* EGORSHIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8450266227AFB4E00023A190 /* Build configuration list for PBXNativeTarget "EGORSHIPTests" */;
+			buildPhases = (
+				8450264727AFB4E00023A190 /* Sources */,
+				8450264827AFB4E00023A190 /* Frameworks */,
+				8450264927AFB4E00023A190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8450264D27AFB4E00023A190 /* PBXTargetDependency */,
+			);
+			name = EGORSHIPTests;
+			productName = EGORSHIPTests;
+			productReference = 8450264B27AFB4E00023A190 /* EGORSHIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8450265427AFB4E00023A190 /* EGORSHIPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8450266527AFB4E00023A190 /* Build configuration list for PBXNativeTarget "EGORSHIPUITests" */;
+			buildPhases = (
+				8450265127AFB4E00023A190 /* Sources */,
+				8450265227AFB4E00023A190 /* Frameworks */,
+				8450265327AFB4E00023A190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8450265727AFB4E00023A190 /* PBXTargetDependency */,
+			);
+			name = EGORSHIPUITests;
+			productName = EGORSHIPUITests;
+			productReference = 8450265527AFB4E00023A190 /* EGORSHIPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8450263327AFB4DE0023A190 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8450263A27AFB4DE0023A190 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8450264A27AFB4E00023A190 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8450263A27AFB4DE0023A190;
+					};
+					8450265427AFB4E00023A190 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8450263A27AFB4DE0023A190;
+					};
+				};
+			};
+			buildConfigurationList = 8450263627AFB4DE0023A190 /* Build configuration list for PBXProject "EGORSHIP" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8450263227AFB4DE0023A190;
+			productRefGroup = 8450263C27AFB4DE0023A190 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8450263A27AFB4DE0023A190 /* EGORSHIP */,
+				8450264A27AFB4E00023A190 /* EGORSHIPTests */,
+				8450265427AFB4E00023A190 /* EGORSHIPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8450263927AFB4DE0023A190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8450264627AFB4DF0023A190 /* Preview Assets.xcassets in Resources */,
+				8450264327AFB4DF0023A190 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8450264927AFB4E00023A190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8450265327AFB4E00023A190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8450263727AFB4DE0023A190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F4280827D49F5400B33500 /* FinalGrade.swift in Sources */,
+				840A73B327B8DFE10095B838 /* User_EGORSHIP.xcdatamodeld in Sources */,
+				8450264127AFB4DE0023A190 /* ContentView.swift in Sources */,
+				840A73B527B8E18F0095B838 /* DataBase.swift in Sources */,
+				84F4280427D498DD00B33500 /* SOCH.swift in Sources */,
+				8450263F27AFB4DE0023A190 /* EGORSHIPApp.swift in Sources */,
+				840A73B727B8E4050095B838 /* UserView.swift in Sources */,
+				84F4280627D4990C00B33500 /* SOR.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8450264727AFB4E00023A190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8450265027AFB4E00023A190 /* EGORSHIPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8450265127AFB4E00023A190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8450265C27AFB4E00023A190 /* EGORSHIPUITestsLaunchTests.swift in Sources */,
+				8450265A27AFB4E00023A190 /* EGORSHIPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8450264D27AFB4E00023A190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8450263A27AFB4DE0023A190 /* EGORSHIP */;
+			targetProxy = 8450264C27AFB4E00023A190 /* PBXContainerItemProxy */;
+		};
+		8450265727AFB4E00023A190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8450263A27AFB4DE0023A190 /* EGORSHIP */;
+			targetProxy = 8450265627AFB4E00023A190 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8450265D27AFB4E00023A190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8450265E27AFB4E00023A190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8450266027AFB4E00023A190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EGORSHIP/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = itstep.EGORSHIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8450266127AFB4E00023A190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EGORSHIP/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = itstep.EGORSHIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8450266327AFB4E00023A190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = itstep.EGORSHIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EGORSHIP.app/EGORSHIP";
+			};
+			name = Debug;
+		};
+		8450266427AFB4E00023A190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = itstep.EGORSHIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EGORSHIP.app/EGORSHIP";
+			};
+			name = Release;
+		};
+		8450266627AFB4E00023A190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = itstep.EGORSHIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EGORSHIP;
+			};
+			name = Debug;
+		};
+		8450266727AFB4E00023A190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = itstep.EGORSHIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EGORSHIP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8450263627AFB4DE0023A190 /* Build configuration list for PBXProject "EGORSHIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8450265D27AFB4E00023A190 /* Debug */,
+				8450265E27AFB4E00023A190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8450265F27AFB4E00023A190 /* Build configuration list for PBXNativeTarget "EGORSHIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8450266027AFB4E00023A190 /* Debug */,
+				8450266127AFB4E00023A190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8450266227AFB4E00023A190 /* Build configuration list for PBXNativeTarget "EGORSHIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8450266327AFB4E00023A190 /* Debug */,
+				8450266427AFB4E00023A190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8450266527AFB4E00023A190 /* Build configuration list for PBXNativeTarget "EGORSHIPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8450266627AFB4E00023A190 /* Debug */,
+				8450266727AFB4E00023A190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		840A73B127B8DFE10095B838 /* User_EGORSHIP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				840A73B227B8DFE10095B838 /* User_EGORSHIP.xcdatamodel */,
+			);
+			currentVersion = 840A73B227B8DFE10095B838 /* User_EGORSHIP.xcdatamodel */;
+			path = User_EGORSHIP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8450263327AFB4DE0023A190 /* Project object */;
+}
