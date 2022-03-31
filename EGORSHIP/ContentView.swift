@@ -15,6 +15,7 @@ struct ContentView: View {
     @State var i = 0
     @State var mail = ""
     
+    @State var isLogIn = false
     
     var body: some View{
         
@@ -67,14 +68,18 @@ struct ContentView: View {
                     }
                 }
 
+                NavigationLink(destination: UserView(), isActive: $isLogIn){
+                    EmptyView()
+                }
                 Button("Log in"){
+                    self.isLogIn.toggle()
                     let user = User(context: moc)
                     if login == user.login{
                         if password == user.password{
-                            UserView()
                         }
                     }
                 }
+                
                 Button("Delete all"){
                     let user = User(context: moc)
                     if user.role == "Admin"{

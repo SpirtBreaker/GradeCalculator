@@ -11,15 +11,15 @@ struct SOR: View {
     var body: some View {
         ZStack{
             Color.indigo.ignoresSafeArea()
-        NavigationLink(destination: SOCH(), label: {
-            Text("Count SOCH -->")
-        }).position(x: 140, y: -140).foregroundColor(.white).frame(width: 100, height: 200)
-        NavigationLink(destination: UserView(), label: {
-            Text("<-- Count FO")
-        }).position(x: -40, y:-140).foregroundColor(.white).frame(width: 100, height: 200)
-        ButtonsForSOR()
+            NavigationLink(destination: SOCH(), label: {
+                Text("Count SOCH -->")
+            }).position(x: 140, y: -140).foregroundColor(.white).frame(width: 100, height: 200)
+            NavigationLink(destination: UserView(), label: {
+                Text("<-- Count FO")
+            }).position(x: -40, y:-140).foregroundColor(.white).frame(width: 100, height: 200)
+            ButtonsForSOR()
+        }
     }
-}
 }
 
 struct SOR_Previews: PreviewProvider {
@@ -76,6 +76,7 @@ struct ButtonsForSOR: View{
     
     var body: some View{
         ZStack{
+            
             Button(action: {ForSOR.CalculateZero()}, label: {Text("<0>")}).position(x: 160, y: 460).colorInvert()
             Button(action: {ForSOR.CalculateNine()}, label: {Text("<9>")}).position(x: 230, y: 340).colorInvert()
             Button(action: {ForSOR.CalculateEight()}, label: {Text("<8>")}).position(x: 160, y: 340).colorInvert()
@@ -86,7 +87,7 @@ struct ButtonsForSOR: View{
             Button(action: {ForSOR.CalculateThree()}, label: {Text("<3>")}).position(x: 230, y: 420).colorInvert()
             Button(action: {ForSOR.CalculateTwo()}, label: {Text("<2>")}).position(x: 160, y: 420).colorInvert()
             Button(action: {ForSOR.CalculateOne()}, label: {Text("<1>")}).position(x: 90, y: 420).colorInvert()
+            
         }
     }
 }
-

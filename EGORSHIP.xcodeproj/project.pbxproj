@@ -20,6 +20,7 @@
 		84F4280427D498DD00B33500 /* SOCH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4280327D498DD00B33500 /* SOCH.swift */; };
 		84F4280627D4990C00B33500 /* SOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4280527D4990C00B33500 /* SOR.swift */; };
 		84F4280827D49F5400B33500 /* FinalGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4280727D49F5400B33500 /* FinalGrade.swift */; };
+		84FEDB6027F5BB320003177F /* funcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FEDB5F27F5BB320003177F /* funcs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		84F4280327D498DD00B33500 /* SOCH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCH.swift; sourceTree = "<group>"; };
 		84F4280527D4990C00B33500 /* SOR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOR.swift; sourceTree = "<group>"; };
 		84F4280727D49F5400B33500 /* FinalGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalGrade.swift; sourceTree = "<group>"; };
+		84FEDB5F27F5BB320003177F /* funcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funcs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		8450263227AFB4DE0023A190 = {
 			isa = PBXGroup;
 			children = (
+				84FEDB5F27F5BB320003177F /* funcs.swift */,
 				84F4280527D4990C00B33500 /* SOR.swift */,
 				84F4280327D498DD00B33500 /* SOCH.swift */,
 				84F4280727D49F5400B33500 /* FinalGrade.swift */,
@@ -282,6 +285,7 @@
 				84F4280427D498DD00B33500 /* SOCH.swift in Sources */,
 				8450263F27AFB4DE0023A190 /* EGORSHIPApp.swift in Sources */,
 				840A73B727B8E4050095B838 /* UserView.swift in Sources */,
+				84FEDB6027F5BB320003177F /* funcs.swift in Sources */,
 				84F4280627D4990C00B33500 /* SOR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

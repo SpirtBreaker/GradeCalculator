@@ -9,26 +9,26 @@ import SwiftUI
 import Foundation
 
 struct UserView: View {
-    @State var Grade = "Ваша оценка"
-    
-    func CountGrade(){
-        
-    }
+    @State var isLogIn = false
     var body: some View {
-        NavigationView{
             ZStack{
                 Color.indigo.ignoresSafeArea()
                 Buttons()
-                NavigationLink(destination: SOR(), label: {
-                    Text("Count SOR -->")
-                }).position(x: 140, y: -180).foregroundColor(.white).frame(width: 100, height: 200)
-                NavigationLink(destination: SOCH(), label: {
-                    Text("<-- Count SOCH")
-                }).position(x: -40, y: -180).foregroundColor(.white).frame(width: 100, height: 200)
+                NavigationLink(destination: SOR(), isActive: $isLogIn){
+                    EmptyView()
+                }
+                Button("-->SOR"){
+                    self.isLogIn.toggle()
+                }.position(x: 250, y: 0)
+                NavigationLink(destination: SOCH(), isActive: $isLogIn){
+                    EmptyView()
+                }
+                Button("<--SOCH"){
+                    self.isLogIn.toggle()
+                }.position(x: 90, y: 0)
                 Text("Count FO").position(x: 155, y: 100)
                 Button(action: {CountGrade()}, label: {Text("Grade")})
-            }
-        }.navigationTitle(Text("asd"))
+            }.navigationBarBackButtonHidden(true)
     }
 }
 
