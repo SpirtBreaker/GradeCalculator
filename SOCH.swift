@@ -15,13 +15,6 @@ struct SOCH: View {
     var body: some View {
         ZStack{
             Color.indigo.ignoresSafeArea()
-            NavigationLink(destination: ButtonsForSOR(), label: {
-                Text("Count grade -->")
-            }).position(x: 140, y: -140).foregroundColor(.white).frame(width: 100, height: 200)
-            NavigationLink(destination: SOR(), label: {
-                Text("<-- Count SOR")
-            }).position(x: -40, y:-140).foregroundColor(.white).frame(width: 100, height: 200)
-            Button(action: {ForSOCH.ChangeBool()}, label: {Text("Switcher for SOCH fact // SOCH max")})
             ButtonsForSOCH()
         }
     }

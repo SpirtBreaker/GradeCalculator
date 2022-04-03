@@ -10,116 +10,107 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
-    @State var login = ""
-    @State var password = ""
-    @State var i = 0
-    @State var mail = ""
-    
-    @State var isLogIn = false
     
     var body: some View{
         
         NavigationView{
             
             VStack{
+                RoundedRectangle(cornerRadius: 10).fill(Color.red).frame(width: 250, height: 110).position(x: Sig.pos1, y: Sig.pos2)
+                Registation().position(x: 130, y: 100)
                 
                 List(users) { user in
                     HStack{
                         Text("Name: \(user.login ?? "UU"), Role: \(user.role ?? "UU")")
                         
                     }
-                }
-                TextField("Login", text: $login)
-                TextField("Password", text: $password)
-                //Picker(selection: $mails, content: , label: Text("Mail"))
-                Button("Register"){
-//                    let names = ["Tom", "Jony", "Victoris"]
-//                    let lastnames = ["Kruiz", "Goran", "Stephary"]
-//                    let thisName = login
-//                    let thisLastName = lastnames.randomElement()
-                    do{
-                        let user = User(context: moc)
-                        user.id = UUID()
-                        for i in 0...6{
-                            if password.count >= 5{
-                                user.password = password
-                            }
-                            else{
-                                Text("Error").position(x: 160, y: -50)
-                            }
-                            if login.count >= 3{
-                                user.login = login
-                            }
-                            else{
-                                Text("Error").position(x: 160, y: -50)
-                            }
-                        }
-                        user.password = password
-                        user.login = login
-                        user.role = "Common User"
-                        if user.login == "Admin"{
-                            if user.password == "Admin"{
-                                user.role = "Admin"
-                            }
-                        }
-                        try moc.save()
-                    }catch{
-                        print(error)
-                    }
-                }
-
-                NavigationLink(destination: UserView(), isActive: $isLogIn){
-                    EmptyView()
-                }
-                Button("Log in"){
-                    self.isLogIn.toggle()
-                    let user = User(context: moc)
-                    if login == user.login{
-                        if password == user.password{
-                        }
-                    }
-                }
-                
-                Button("Delete all"){
-                    let user = User(context: moc)
-                    if user.role == "Admin"{
-                    for user in users{
-                        try? moc.delete(user)
-                    }
-                    }
-                    else{
-                        print("Error")
-                    }
-                }.padding().frame(width: 300, height: 100).foregroundColor(.red)
+                }.padding().frame(width: 300, height: 100)
                 
             }
+            
         }
-        .navigationTitle("Users")
     }
 }
-struct SignIn: View{
+//}
+//struct SignIn: View{
+//    @Environment(\.managedObjectContext) var moc
+//    @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
+//    @State var isAdmin = false
+//    @State var login: String = ""
+//    @State var password: String = ""
+//    var body: some View{
+//        NavigationView{
+//            VStack{
+//                TextField("Login: ", text: $login)
+//                TextField("Password: ", text: $password)
+//                Button("Sign In"){
+//                    for user in users{
+//                        if user.login == login && user.password == password && user.role == "Admin"{
+//                            self.isAdmin = true
+//                        }
+//                        else{
+//                            print("NOT")
+//                        }
+//                    }
+//                }
+//            }
+//            .navigationTitle("Sign In")
+//        }
+//    }
+//}
+
+struct LogIn: View{
+    @State var isLogIn = false
+    
+    var body: some View{
+        NavigationLink(destination: UserView(), isActive: $isLogIn){
+            EmptyView()
+        }
+        Button("GO"){
+            self.isLogIn.toggle()
+        }
+    }
+}
+
+struct Registation: View{
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
-    @State var isAdmin = false
-    @State var login: String = ""
-    @State var password: String = ""
+    @State var login = ""
+    @State var password = ""
+    
+    
     var body: some View{
-        NavigationView{
-            VStack{
-                TextField("Login: ", text: $login)
-                TextField("Password: ", text: $password)
-                Button("Sign In"){
-                    for user in users{
-                        if user.login == login && user.password == password && user.role == "Admin"{
-                            self.isAdmin = true
-                        }
-                        else{
-                            print("NOT")
-                        }
+        var sig = Sig()
+        VStack{
+            TextField("Login", text: $login)
+            TextField("Password", text: $password)
+            
+            Button("Register"){
+                do{
+                    let user = User(context: moc)
+                    user.id = UUID()
+                    user.password = password
+                    user.login = login
+                    if (user.login == "Admin") && (user.password == "Admin"){
+                        user.role = "Admin"
                     }
+                    else{
+                        user.role = "Common user"
+                    }
+                    try moc.save()
+                }catch{
+                    print(error)
                 }
             }
-            .navigationTitle("Sign In")
+            Button("Log in"){
+                let user = User(context: moc)
+                    if login == user.login && password == user.password{
+                        sig.Change()
+                    }
+                }
+            Button("Delete all"){
+                DeleteAll()
+            }
         }
     }
 }

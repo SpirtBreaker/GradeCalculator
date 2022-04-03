@@ -11,12 +11,6 @@ struct SOR: View {
     var body: some View {
         ZStack{
             Color.indigo.ignoresSafeArea()
-            NavigationLink(destination: SOCH(), label: {
-                Text("Count SOCH -->")
-            }).position(x: 140, y: -140).foregroundColor(.white).frame(width: 100, height: 200)
-            NavigationLink(destination: UserView(), label: {
-                Text("<-- Count FO")
-            }).position(x: -40, y:-140).foregroundColor(.white).frame(width: 100, height: 200)
             ButtonsForSOR()
         }
     }

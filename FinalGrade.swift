@@ -10,6 +10,7 @@ import SwiftUI
 struct FinalGrade: View {
     var body: some View {
         CountFinalGrade()
+        
     }
 }
 
@@ -27,7 +28,7 @@ struct CountFinalGrade: View{
                 CountGrade()
             }label:{
                 Text("Count final grade")
-            }
+            }.position(x: 100, y: 150)
         }
     }
 }

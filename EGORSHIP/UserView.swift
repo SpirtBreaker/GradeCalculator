@@ -11,24 +11,29 @@ import Foundation
 struct UserView: View {
     @State var isLogIn = false
     var body: some View {
-            ZStack{
-                Color.indigo.ignoresSafeArea()
-                Buttons()
-                NavigationLink(destination: SOR(), isActive: $isLogIn){
-                    EmptyView()
-                }
-                Button("-->SOR"){
-                    self.isLogIn.toggle()
-                }.position(x: 250, y: 0)
-                NavigationLink(destination: SOCH(), isActive: $isLogIn){
-                    EmptyView()
-                }
-                Button("<--SOCH"){
-                    self.isLogIn.toggle()
-                }.position(x: 90, y: 0)
-                Text("Count FO").position(x: 155, y: 100)
-                Button(action: {CountGrade()}, label: {Text("Grade")})
-            }.navigationBarBackButtonHidden(true)
+        ZStack{
+            Color.indigo.ignoresSafeArea()
+            Buttons()
+            NavigationLink(destination: FinalGrade(), isActive: $isLogIn){
+                EmptyView()
+            }
+            Button("Count final grade"){
+                self.isLogIn.toggle()
+            }.position(x: 155, y: 40)
+            NavigationLink(destination: SOR(), isActive: $isLogIn){
+                EmptyView()
+            }
+            Button("-->SOR"){
+                self.isLogIn.toggle()
+            }.position(x: 250, y: 0)
+            NavigationLink(destination: SOCH(), isActive: $isLogIn){
+                EmptyView()
+            }
+            Button("<--SOCH"){
+                self.isLogIn.toggle()
+            }.position(x: 90, y: 0)
+            Button(action: {CountGrade()}, label: {Text("Grade")})
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
