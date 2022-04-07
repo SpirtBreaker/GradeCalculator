@@ -12,8 +12,8 @@ struct UserView: View {
     @State var isLogIn = false
     var body: some View {
         ZStack{
-            Color.indigo.ignoresSafeArea()
-            Buttons()
+            Color.black.ignoresSafeArea()
+            Buttons().zIndex(100)
             NavigationLink(destination: FinalGrade(), isActive: $isLogIn){
                 EmptyView()
             }
@@ -33,6 +33,7 @@ struct UserView: View {
                 self.isLogIn.toggle()
             }.position(x: 90, y: 0)
             Button(action: {CountGrade()}, label: {Text("Grade")})
+            Recta()
         }.navigationBarBackButtonHidden(true)
     }
 }
@@ -96,20 +97,34 @@ struct Buttons: View{
     
     var body: some View{
         ZStack{
-            Button(action: {ForSumm.CountTen()}, label: {Text("<10>")}).position(x: 90, y: 300).colorInvert()
-            Button(action: {ForSumm.CountNine()}, label: {Text("<9>")}).position(x: 160, y: 300).colorInvert()
-            Button(action: {ForSumm.CountEight()}, label: {Text("<8>")}).position(x: 230, y: 300).colorInvert()
-            Button(action: {ForSumm.CountSeven()}, label: {Text("<7>")}).position(x: 90, y: 340).colorInvert()
-            Button(action: {ForSumm.CountSix()}, label: {Text("<6>")}).position(x: 160, y: 340).colorInvert()
-            Button(action: {ForSumm.CountFive()}, label: {Text("<5>")}).position(x: 230, y: 340).colorInvert()
-            Button(action: {ForSumm.CountFour()}, label: {Text("<4>")}).position(x: 90, y: 380).colorInvert()
-            Button(action: {ForSumm.CountThree()}, label: {Text("<3>")}).position(x: 160, y: 380).colorInvert()
-            Button(action: {ForSumm.CountTwo()}, label: {Text("<2>")}).position(x: 230, y: 380).colorInvert()
-            Button(action: {ForSumm.CountOne()}, label: {Text("<1>")}).position(x: 160, y: 420).colorInvert()
+            Button(action: {ForSumm.CountTen()}, label: {Text("10")}).position(x: 90, y: 300).foregroundColor(.white)
+            Button(action: {ForSumm.CountNine()}, label: {Text("9")}).position(x: 160, y: 300).foregroundColor(.white)
+            Button(action: {ForSumm.CountEight()}, label: {Text("8")}).position(x: 230, y: 300).foregroundColor(.white)
+            Button(action: {ForSumm.CountSeven()}, label: {Text("7")}).position(x: 90, y: 340).foregroundColor(.white)
+            Button(action: {ForSumm.CountSix()}, label: {Text("6")}).position(x: 160, y: 340).foregroundColor(.white)
+            Button(action: {ForSumm.CountFive()}, label: {Text("5")}).position(x: 230, y: 340).foregroundColor(.white)
+            Button(action: {ForSumm.CountFour()}, label: {Text("4")}).position(x: 90, y: 380).foregroundColor(.white)
+            Button(action: {ForSumm.CountThree()}, label: {Text("3")}).position(x: 160, y: 380).foregroundColor(.white)
+            Button(action: {ForSumm.CountTwo()}, label: {Text("2")}).position(x: 230, y: 380).foregroundColor(.white)
+            Button(action: {ForSumm.CountOne()}, label: {Text("1")}).position(x: 160, y: 420).foregroundColor(.white)
         }
     }
 }
 
+struct Recta: View{
+    var body: some View{
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 420)
+    }
+}
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         UserView()

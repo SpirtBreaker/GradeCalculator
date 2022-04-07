@@ -23,12 +23,13 @@ struct FinalGrade_Previews: PreviewProvider {
 struct CountFinalGrade: View{
     var body: some View{
         ZStack{
-            Color.indigo.ignoresSafeArea()
+            Color.black.ignoresSafeArea()
             Button{
                 CountGrade()
             }label:{
                 Text("Count final grade")
-            }.position(x: 100, y: 150)
+            }.position(x: 160, y: 150).foregroundColor(.white)
+            Text("\(Grade)").position(x: 160, y: 100).foregroundColor(.white)
         }
     }
 }

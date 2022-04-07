@@ -10,8 +10,19 @@ import SwiftUI
 struct SOR: View {
     var body: some View {
         ZStack{
-            Color.indigo.ignoresSafeArea()
-            ButtonsForSOR()
+            Color.black.ignoresSafeArea()
+            ButtonsForSOR().zIndex(100)
+            Rectang()
+            NavigationLink(destination: SOCH()){
+                EmptyView()
+            }
+            Button("-->SOCH"){
+            }.position(x: 220, y: 15)
+            NavigationLink(destination: UserView()){
+                EmptyView()
+            }
+            Button("<--FO"){
+            }.position(x: 80, y: 15)
         }
     }
 }
@@ -71,17 +82,32 @@ struct ButtonsForSOR: View{
     var body: some View{
         ZStack{
             
-            Button(action: {ForSOR.CalculateZero()}, label: {Text("<0>")}).position(x: 160, y: 460).colorInvert()
-            Button(action: {ForSOR.CalculateNine()}, label: {Text("<9>")}).position(x: 230, y: 340).colorInvert()
-            Button(action: {ForSOR.CalculateEight()}, label: {Text("<8>")}).position(x: 160, y: 340).colorInvert()
-            Button(action: {ForSOR.CalculateSeven()}, label: {Text("<7>")}).position(x: 90, y: 340).colorInvert()
-            Button(action: {ForSOR.CalculateSix()}, label: {Text("<6>")}).position(x: 230, y: 380).colorInvert()
-            Button(action: {ForSOR.CalculateFive()}, label: {Text("<5>")}).position(x: 160, y: 380).colorInvert()
-            Button(action: {ForSOR.CalculateFour()}, label: {Text("<4>")}).position(x: 90, y: 380).colorInvert()
-            Button(action: {ForSOR.CalculateThree()}, label: {Text("<3>")}).position(x: 230, y: 420).colorInvert()
-            Button(action: {ForSOR.CalculateTwo()}, label: {Text("<2>")}).position(x: 160, y: 420).colorInvert()
-            Button(action: {ForSOR.CalculateOne()}, label: {Text("<1>")}).position(x: 90, y: 420).colorInvert()
+            Button(action: {ForSOR.CalculateZero()}, label: {Text("0")}).position(x: 160, y: 420).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateNine()}, label: {Text("9")}).position(x: 230, y: 300).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateEight()}, label: {Text("8")}).position(x: 160, y: 300).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateSeven()}, label: {Text("7")}).position(x: 90, y: 300).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateSix()}, label: {Text("6")}).position(x: 230, y: 340).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateFive()}, label: {Text("5")}).position(x: 160, y: 340).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateFour()}, label: {Text("4")}).position(x: 90, y: 340).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateThree()}, label: {Text("3")}).position(x: 230, y: 380).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateTwo()}, label: {Text("2")}).position(x: 160, y: 380).foregroundColor(.white)
+            Button(action: {ForSOR.CalculateOne()}, label: {Text("1")}).position(x: 90, y: 380).foregroundColor(.white)
             
         }
+    }
+}
+
+struct Rectang: View{
+    var body: some View{
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 420)
     }
 }

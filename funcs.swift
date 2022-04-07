@@ -43,26 +43,3 @@ func PlusBD(){
     
 }
 
-public class Sig{
-    @State static var pos1: CGFloat = 1000
-    @State static var pos2: CGFloat = 1000
-    public func Change(){
-        if Sig.pos1 == 1000 && Sig.pos2 == 1000{
-            Sig.pos1 = 130
-            Sig.pos2 = -100
-        }
-    }
-}
-
-func DeleteAll(){
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
-    
-    let user = User(context: moc)
-    if user.login == "Admin"{
-        for item in users{
-            moc.delete(item)
-        }
-    }
-        try? moc.save()
-}

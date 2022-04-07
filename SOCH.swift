@@ -10,12 +10,26 @@ import SwiftUI
 
 
 struct SOCH: View {
-
+    var forsch = ForSOCH()
     
     var body: some View {
         ZStack{
-            Color.indigo.ignoresSafeArea()
-            ButtonsForSOCH()
+            Color.black.ignoresSafeArea()
+            ButtonsForSOCH().zIndex(100)
+            Rectan()
+            NavigationLink(destination: FinalGrade()){
+                EmptyView()
+            }
+            Button("-->Count Final Grade"){
+            }.position(x: 220, y: 15)
+            NavigationLink(destination: SOR()){
+                EmptyView()
+            }
+            Button("<--SOR"){
+            }.position(x: 60, y: 15)
+            Button("Change FACT/MAX"){
+                forsch.ChangeBool()
+            }.position(x: 160, y: 150)
         }
     }
 }
@@ -30,13 +44,21 @@ public class ForSOCH{
     public static var SOCHmax = ""
     static var Tool = false
     
-    static func ChangeBool(){
-        Tool.toggle()
+    public func ChangeBool(){
+        if Tool == false{
+            Tool = true
+        }
+        else if Tool == true{
+            Tool = false
+        }
     }
     
     static func CalculateZero(){
         if Tool == false{
             SOCHfact += "0"
+        }
+        else{
+            SOCHmax += "0"
         }
     }
     
@@ -44,11 +66,17 @@ public class ForSOCH{
         if Tool == false{
             SOCHfact += "9"
         }
+        else{
+            SOCHmax += "9"
+        }
     }
     
     static func CalculateEight(){
         if Tool == false{
             SOCHfact += "8"
+        }
+        else{
+            SOCHmax += "8"
         }
     }
     
@@ -56,11 +84,17 @@ public class ForSOCH{
         if Tool == false{
             SOCHfact += "7"
         }
+        else{
+            SOCHmax += "7"
+        }
     }
     
     static func CalculateSix(){
         if Tool == false{
             SOCHfact += "6"
+        }
+        else{
+            SOCHmax += "6"
         }
     }
     
@@ -68,11 +102,17 @@ public class ForSOCH{
         if Tool == false{
             SOCHfact += "5"
         }
+        else{
+            SOCHmax += "5"
+        }
     }
     
     static func CalculateFour(){
         if Tool == false{
             SOCHfact += "4"
+        }
+        else{
+            SOCHmax += "4"
         }
     }
     
@@ -80,17 +120,26 @@ public class ForSOCH{
         if Tool == false{
             SOCHfact += "3"
         }
+        else{
+            SOCHmax += "3"
+        }
     }
     
     static func CalculateTwo(){
         if Tool == false{
             SOCHfact += "2"
         }
+        else{
+            SOCHmax += "2"
+        }
     }
     
     static func CalculateOne(){
         if Tool == false{
             SOCHfact += "1"
+        }
+        else{
+            SOCHmax += "1"
         }
     }
     
@@ -100,17 +149,31 @@ struct ButtonsForSOCH: View{
     
     var body: some View{
         ZStack{
-            Button(action: {ForSOCH.CalculateZero()}, label: {Text("<0>")}).position(x: 160, y: 460).colorInvert()
-            Button(action: {ForSOCH.CalculateNine()}, label: {Text("<9>")}).position(x: 230, y: 340).colorInvert()
-            Button(action: {ForSOCH.CalculateEight()}, label: {Text("<8>")}).position(x: 160, y: 340).colorInvert()
-            Button(action: {ForSOCH.CalculateSeven()}, label: {Text("<7>")}).position(x: 90, y: 340).colorInvert()
-            Button(action: {ForSOCH.CalculateSix()}, label: {Text("<6>")}).position(x: 230, y: 380).colorInvert()
-            Button(action: {ForSOCH.CalculateFive()}, label: {Text("<5>")}).position(x: 160, y: 380).colorInvert()
-            Button(action: {ForSOCH.CalculateFour()}, label: {Text("<4>")}).position(x: 90, y: 380).colorInvert()
-            Button(action: {ForSOCH.CalculateThree()}, label: {Text("<3>")}).position(x: 230, y: 420).colorInvert()
-            Button(action: {ForSOCH.CalculateTwo()}, label: {Text("<2>")}).position(x: 160, y: 420).colorInvert()
-            Button(action: {ForSOCH.CalculateOne()}, label: {Text("<1>")}).position(x: 90, y: 420).colorInvert()
+            Button(action: {ForSOCH.CalculateZero()}, label: {Text("0")}).position(x: 160, y: 420).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateNine()}, label: {Text("9")}).position(x: 230, y: 300).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateEight()}, label: {Text("8")}).position(x: 160, y: 300).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateSeven()}, label: {Text("7")}).position(x: 90, y: 300).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateSix()}, label: {Text("6")}).position(x: 230, y: 340).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateFive()}, label: {Text("5")}).position(x: 160, y: 340).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateFour()}, label: {Text("4")}).position(x: 90, y: 340).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateThree()}, label: {Text("3")}).position(x: 230, y: 380).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateTwo()}, label: {Text("2")}).position(x: 160, y: 380).foregroundColor(.white)
+            Button(action: {ForSOCH.CalculateOne()}, label: {Text("1")}).position(x: 90, y: 380).foregroundColor(.white)
         }
     }
 }
 
+struct Rectan: View{
+    var body: some View{
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 300)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 340)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 90, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 230, y: 380)
+        RoundedRectangle(cornerRadius: 100).fill(.gray).frame(width: 30, height: 30).position(x: 160, y: 420)
+    }
+}

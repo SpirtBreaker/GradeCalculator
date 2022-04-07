@@ -14,77 +14,66 @@ struct ContentView: View {
     var body: some View{
         
         NavigationView{
-            
             VStack{
-                RoundedRectangle(cornerRadius: 10).fill(Color.red).frame(width: 250, height: 110).position(x: Sig.pos1, y: Sig.pos2)
-                Registation().position(x: 130, y: 100)
                 
-                List(users) { user in
-                    HStack{
-                        Text("Name: \(user.login ?? "UU"), Role: \(user.role ?? "UU")")
-                        
-                    }
-                }.padding().frame(width: 300, height: 100)
                 
-            }
+                SignIn().position(x: 130, y: 100)
+                
+                //                List(users) { user in
+                //                    HStack{
+                //                        Text("Name: \(user.login ?? " "), Role: \(user.role ?? " ")")
+                //
+                //                    }
+            }.padding().frame(width: 300, height: 100)
             
         }
+        
     }
 }
-//}
-//struct SignIn: View{
-//    @Environment(\.managedObjectContext) var moc
-//    @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
-//    @State var isAdmin = false
-//    @State var login: String = ""
-//    @State var password: String = ""
-//    var body: some View{
-//        NavigationView{
-//            VStack{
-//                TextField("Login: ", text: $login)
-//                TextField("Password: ", text: $password)
-//                Button("Sign In"){
-//                    for user in users{
-//                        if user.login == login && user.password == password && user.role == "Admin"{
-//                            self.isAdmin = true
-//                        }
-//                        else{
-//                            print("NOT")
-//                        }
-//                    }
-//                }
-//            }
-//            .navigationTitle("Sign In")
-//        }
-//    }
-//}
-
-struct LogIn: View{
-    @State var isLogIn = false
-    
-    var body: some View{
-        NavigationLink(destination: UserView(), isActive: $isLogIn){
-            EmptyView()
-        }
-        Button("GO"){
-            self.isLogIn.toggle()
-        }
-    }
-}
-
-struct Registation: View{
+struct SignIn: View{
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
-    @State var login = ""
-    @State var password = ""
+    @State var isAdmin = false
+    @State var login: String = ""
+    @State var password: String = ""
+    @State var pos1: CGFloat = 1000
+    @State var pos2: CGFloat = 1000
+    @State var isLogIn = false
     
+    func Change(){
+        if pos1 == 1000 && pos2 == 1000{
+            pos1 = 130
+            pos2 = -100
+        }
+    }
     
     var body: some View{
-        var sig = Sig()
+        ZStack{
+            RoundedRectangle(cornerRadius: 10).fill(Color.black).frame(width: 250, height: 110).position(x: pos1, y: pos2)
+            NavigationLink(destination: UserView(), isActive: $isLogIn){
+                EmptyView()
+            }.position(x: pos1, y: pos2)
+            Button("GO"){
+                self.isLogIn.toggle()
+            }.position(x: pos1, y: pos2).foregroundColor(.orange)
+        }
         VStack{
-            TextField("Login", text: $login)
-            TextField("Password", text: $password)
-            
+            TextField("Login: ", text: $login)
+            TextField("Password: ", text: $password)
+            Button("Log in"){
+                for user in users{
+                    if user.login == login && user.password == password && user.role == "Admin"{
+                        self.isAdmin = true
+                        Change()
+                    }
+                    else if user.login == login && user.password == password{
+                        Change()
+                    }
+                    else{
+                        print("NOT")
+                    }
+                }
+            }.foregroundColor(.orange)
             Button("Register"){
                 do{
                     let user = User(context: moc)
@@ -101,19 +90,22 @@ struct Registation: View{
                 }catch{
                     print(error)
                 }
-            }
-            Button("Log in"){
+            }.foregroundColor(.orange)
+            Button("Delete all"){
                 let user = User(context: moc)
-                    if login == user.login && password == user.password{
-                        sig.Change()
+                if isAdmin == true{
+                    for item in users{
+                        moc.delete(item)
                     }
                 }
-            Button("Delete all"){
-                DeleteAll()
-            }
+                try? moc.save()
+            }.foregroundColor(.orange)
+            
         }
+        
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
