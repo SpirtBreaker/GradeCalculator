@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SOR: View {
+//    if #available(iOS 11, *){
+//
+//    } 
     var body: some View {
         ZStack{
             Color.black.ignoresSafeArea()
@@ -23,57 +26,123 @@ struct SOR: View {
             }
             Button("<--FO"){
             }.position(x: 80, y: 15)
+            Button("Change FACT/MAX"){
+                ForSOR.ChangeBool()
+            }.position(x: 160, y: 150)
         }
     }
 }
 
 struct SOR_Previews: PreviewProvider {
     static var previews: some View {
-        SOR()
+        Group {
+            SOR()
+            SOR()
+        }
     }
 }
 public class ForSOR{
     public static var SORfact = ""
     public static var SORmax = ""
+    public static var Tool = false
     
-    static func CalculateZero(){
-        SORfact += "0"
+    public static func ChangeBool(){
+        if Tool == false{
+            Tool = true
+        }
+        else if Tool == true{
+            Tool = false
+        }
     }
     
-    static func CalculateNine(){
+    public static func CalculateZero(){
+        if Tool == false{
+            SORfact += "0"
+        }
+        else if Tool == true{
+            SORmax += "0"
+        }
+    }
+    
+    public static func CalculateNine(){
+        if Tool == false{
         SORfact += "9"
     }
+        else if Tool == true{
+            SORmax += "9"
+        }
+    }
     
-    static func CalculateEight(){
+    public static func CalculateEight(){
+        if Tool == true{
         SORfact += "8"
     }
+        else if Tool == false{
+            SORmax += "8"
+        }
+    }
     
-    static func CalculateSeven(){
+    public static func CalculateSeven(){
+        if Tool == false{
         SORfact += "7"
     }
+        else if Tool == true{
+            SORmax += "7"
+        }
+    }
     
-    static func CalculateSix(){
+    public static func CalculateSix(){
+        if Tool == false{
         SORfact += "6"
     }
+        else if Tool == true{
+            SORmax += "6"
+        }
+    }
     
-    static func CalculateFive(){
+    public static func CalculateFive(){
+        if Tool == false{
         SORfact += "5"
     }
+        else if Tool == true{
+            SORmax += "5"
+        }
+    }
     
-    static func CalculateFour(){
+    public static func CalculateFour(){
+        if Tool == false{
         SORfact += "4"
     }
+        else if Tool == true{
+            SORmax += "4"
+        }
+    }
     
-    static func CalculateThree(){
+    public static func CalculateThree(){
+        if Tool == false{
         SORfact += "3"
     }
-    
-    static func CalculateTwo(){
-        SORfact += "2"
+        else if Tool == true{
+            SORmax += "3"
+        }
     }
     
-    static func CalculateOne(){
+    public static func CalculateTwo(){
+        if Tool == false{
+        SORfact += "2"
+    }
+        else if Tool == true{
+            SORmax += "2"
+        }
+    }
+    
+    public static func CalculateOne(){
+        if Tool == false{
         SORfact += "1"
+    }
+        else if Tool == true{
+            SORmax += "1"
+        }
     }
     
 }

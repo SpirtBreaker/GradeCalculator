@@ -10,7 +10,6 @@ import SwiftUI
 
 
 struct SOCH: View {
-    var forsch = ForSOCH()
     
     var body: some View {
         ZStack{
@@ -28,7 +27,7 @@ struct SOCH: View {
             Button("<--SOR"){
             }.position(x: 60, y: 15)
             Button("Change FACT/MAX"){
-                forsch.ChangeBool()
+                ForSOCH.ChangeBool()
             }.position(x: 160, y: 150)
         }
     }
@@ -42,9 +41,9 @@ struct SOCH_Previews: PreviewProvider {
 public class ForSOCH{
     public static var SOCHfact = ""
     public static var SOCHmax = ""
-    static var Tool = false
+    public static var Tool = false
     
-    public func ChangeBool(){
+    public static func ChangeBool(){
         if Tool == false{
             Tool = true
         }
