@@ -21,9 +21,9 @@ func CountGrade(){
     temp = ((Int(ForSOR.SORfact) ?? 0) + ForSumm.summfact)
     temp2 = ((Int(ForSOR.SORmax) ?? 0) + ForSumm.summmax)
     temp3 = Double(temp) / Double(temp2)
-    temp3 = temp3 / 2
+    temp3 = temp3 * 0.5
     temp4 = ((Double(ForSOCH.SOCHfact) ?? 0) / (Double(ForSOCH.SOCHmax) ?? 0))
-    temp4 = temp4 / 2
+    temp4 = temp4 * 0.5
     temp5 = Double(temp3) + Double(temp4)
     if (temp5 <= 0.39){
         Grade = 2
@@ -37,9 +37,18 @@ func CountGrade(){
     else if (temp5 >= 0.85){
         Grade = 5
     }
+
 }
 
-func PlusBD(){
-    
+func RemoveAllInfo(){
+    ForSumm.summmax = 0
+    ForSumm.summfact = 0
+    ForSumm.txt = ""
+    ForSOR.SORmax = ""
+    ForSOR.SORfact = ""
+    ForSOR.txt = ""
+    ForSOCH.SOCHmax = ""
+    ForSOCH.SOCHfact = ""
+    ForSOCH.txt = ""
 }
 

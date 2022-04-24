@@ -17,6 +17,7 @@ struct FinalGrade: View {
 struct FinalGrade_Previews: PreviewProvider {
     static var previews: some View {
         FinalGrade()
+
     }
 }
 
@@ -28,8 +29,10 @@ struct CountFinalGrade: View{
                 CountGrade()
             }label:{
                 Text("Count final grade")
-            }.position(x: 160, y: 150).foregroundColor(.white)
-            Text("\(Grade)").position(x: 160, y: 100).foregroundColor(.white)
+            }.position(x: 190, y: 190).foregroundColor(.orange)
+            Text("\(Grade)").position(x: 190, y: 100).foregroundColor(.white).font(.system(size: 50))
+            Button(action: RemoveAllInfo, label: {Text("Count another subject")}).position(x: 190, y: 450).foregroundColor(.orange)
+            Text("\(temp5)").position(x: 190, y: 290).foregroundColor(.white).font(.system(size: 50))
         }
     }
 }
